@@ -95,7 +95,6 @@ export const action = async ({ request }) => {
   if (!isValidPhone(order.phone)) {
     errors.phone = "Invalid phone number";
   }
-  console.log({ errors });
   if (Object.keys(errors).length > 0) {
     return errors;
   }
