@@ -52,9 +52,9 @@ const userSlice = createSlice({
       })
       .addCase(fetchAddressthunk.rejected, (state, action) => {
         (state.status = 'error'),
-          (state.error = action.error.message || 'Something went wrong');
+          (state.error =
+            'There was an error getting your address. Make sure you have geolocation enabled in your browser.');
       }),
-  
 });
 export const { updateName } = userSlice.actions;
 export default userSlice.reducer;
